@@ -93,7 +93,8 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  void app_main(void);
+	  app_main();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
