@@ -2,12 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Check Python Version') {
+        stage('Static Code Analysis') {
             steps {
                 script {
-                    def pythonExecutable = 'C:\\Users\\Usuario\\AppData\\Local\\Programs\\Python\\Python312\\python.exe'
-                    // Ejecuta el comando 'python --version' y muestra la salida en la consola
-                    bat script: "${pythonExecutable} --version", returnStatus: true
+                    def executableLocation = 'C:\\Program Files\\Cppcheck\\cppcheck'  // Reemplaza con la ruta real al ejecutable
+                    def topDir = "${WORKSPACE}\\App"  // Reemplaza con la ruta real al directorio de nivel superior
+
+                    def cmd = "\"${executableLocation}\""
+                    def opt = "--error-exitcode=1 --inline-suppr"
+
+                    bat "${cmd} ${opt} \"${topDir}\""
                 }
             }
         }
