@@ -6,5 +6,5 @@ void main(void)
     /* code */
     printf("Hola");
     
-	uint16_t ola = 65536;
+	uint16_t ola =;
 }
