@@ -3,6 +3,6 @@
 void main(void)
 {
     /* code */
-    printf("Hola")
+    printf("Hola");
     return 0;
 }
