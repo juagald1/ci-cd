@@ -5,13 +5,12 @@ pipeline {
         stage('Static Code Analysis') {
             steps {
                 script {
-                    def executableLocation = 'C:\\Program Files\\Cppcheck\\cppcheck'  // Reemplaza con la ruta real al ejecutable
-                    def topDir = "${WORKSPACE}\\App"  // Reemplaza con la ruta real al directorio de nivel superior
+                    def toolDir = 'C:\\Users\\Usuario\\Documents\\GitHub\\ci-cd\\ci-cd-tools'
+                    def topDir = 'C:\\Users\\Usuario\\Documents\\GitHub\\ci-cd\\App'
 
-                    def cmd = "\"${executableLocation}\""
-                    def opt = "--error-exitcode=1 --inline-suppr --platform=win64"
-
-                    bat "${cmd} ${opt} \"${topDir}\""
+                    catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+                        bat "${toolDir}\\static-analysis.bat \"${topDir}\""
+                    }
                 }
             }
         }
