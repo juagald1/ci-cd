@@ -9,7 +9,7 @@ pipeline {
                     def topDir = "${WORKSPACE}\\App"  // Reemplaza con la ruta real al directorio de nivel superior
 
                     def cmd = "\"${executableLocation}\""
-                    def opt = "--error-exitcode=1 --inline-suppr"
+                    def opt = "--error-exitcode=1 --inline-suppr --platform=win64"
 
                     bat "${cmd} ${opt} \"${topDir}\""
                 }
