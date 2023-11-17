@@ -1,9 +1,10 @@
 #include "stdio.h"
+#include "stdint.h"
 
 void main(void)
 {
     /* code */
     printf("Hola");
     
-	int ola;
+	uint16_t ola = 65536;
 }
