@@ -4,5 +4,6 @@ void main(void)
 {
     /* code */
     printf("Hola");
-    return 0;
+    
+	int ola;
 }
