@@ -17,7 +17,7 @@ pipeline {
 					//bat "call \"${GitDirTools}\\NombreProyecto.bat\" \"${GitDirDebug}\""
 					SalidaBat = bat(script: "call \"${GitDirTools}\\NombreProyecto.bat\" \"${GitDirDebug}\"", returnStatus: false, returnStdout: true).trim()
 
-                    echo "La salida del bat es: ${SalidaBat}"
+                    echo "${SalidaBat}"
                 }
             }
         }
