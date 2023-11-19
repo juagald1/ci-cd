@@ -5,15 +5,20 @@ pipeline {
         GitDirPC = 'C:\\Users\\Juan\\Documents\\GitHub\\ci-cd'
         GitDirDebug = "${GitDirPC}\\Debug"
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
+		NombreProyecto = ''
     }
 
     stages {
         stage('Nombre Proyecto') {
             steps {
                 script {
-                    // Ejecutar el archivo .bat desde el directorio de herramientas con el directorio de depuración como argumento
-					bat "call \"${GitDirTools}\\NombreProyecto.bat\" \"${GitDirDebug}\""
-                }
+                    // Se completa la ruta de tools con el archivo .bat y se añade como argumento de enrtada al .bat, la ruta donde debe buscar el archivo. out
+					//bat "call \"${GitDirTools}\\NombreProyecto.bat\" \"${GitDirDebug}\""
+					NombreProyecto = bat(script: "call \"${GitDirTools}\\NombreProyecto.bat\" \"${GitDirDebug}\"", returnStatus: true, returnStdout: true).trim()
+
+                    echo "La salida del bat es: ${env.NombreProyecto}"
+
+				}
             }
         }
     }
