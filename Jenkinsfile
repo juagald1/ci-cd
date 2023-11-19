@@ -24,7 +24,8 @@ pipeline {
 		stage('Version Compilador TI') {
             steps {
                 script {
-                    echo "${NombreProyecto}"
+					error("OLA")
+                    //echo "${NombreProyecto}"
                 }
             }
         }
