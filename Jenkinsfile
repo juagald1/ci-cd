@@ -7,7 +7,7 @@ pipeline {
                 script {
                     def toolDir = 'C:\\Users\\Juan\\Documents\\GitHub\\ci-cd\\ci_cd_tools'
 
-                    bat label: 'Run buscar_palabra.bat', script: "${toolDir}\\buscar_palabra.bat \"TMS\""
+                    bat label: 'Run busca_palabra.bat', script: "${toolDir}\\busca_palabra.bat \"TMS\""
                 }
             }
         }
