@@ -12,9 +12,7 @@ pipeline {
         stage('Check Ver Compilador 22.6.0') {
             steps {
                 script {
-                    echo "GitDirPC: ${env.GitDirPC}"
-                    echo "GitDirTools: ${env.GitDirTools}"
-					echo "${env.GitDirDebug}"
+                    bat "cd ${GitDirTools} && .\\${NombreProyecto}.bat"				
                 }
             }
         }
