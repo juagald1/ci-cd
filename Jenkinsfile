@@ -12,7 +12,9 @@ pipeline {
             steps {
                 script {
                     // Se completa la ruta de tools con el archivo .bat y se añade como argumento de enrtada al .bat, la ruta donde debe buscar el archivo. out
-					bat "call \"${GitDirTools}\\NombreProyecto.bat\" \"${GitDirDebug}\""
+					//bat "call \"${GitDirTools}\\NombreProyecto.bat\" \"${GitDirDebug}\""
+                    def codigoSalida = bat(script: "call \"${GitDirTools}\\NombreProyecto.bat\" \"${GitDirDebug}\"", returnStatus: true)
+                    echo "El código de salida es: ${codigoSalida}"
                 }
             }
         }
