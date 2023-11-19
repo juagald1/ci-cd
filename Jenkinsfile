@@ -1,13 +1,17 @@
 pipeline {
     agent any
+	
+    environment {
+        GitDirPC = 'C:\\Users\\Juan\\Documents\\GitHub\\ci-cd'
+        GitDirTools = "${GitDirPC}\\ci_cd_tools"
+    }
 
     stages {
-        stage('Version Compilador 22.6.0') {
+        stage('Check Ver Compilador 22.6.0') {
             steps {
                 script {
-                    def toolDir = 'C:\\Users\\Juan\\Documents\\GitHub\\ci-cd\\ci_cd_tools'
-
-                    bat label: 'Run busca_palabra.bat', script: "${toolDir}\\busca_palabra.bat \"TMS\""
+                    echo "GitDirPC: ${env.GitDirPC}"
+                    echo "GitDirTools: ${env.GitDirTools}"
                 }
             }
         }
