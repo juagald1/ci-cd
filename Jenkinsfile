@@ -3,6 +3,7 @@ pipeline {
 	
     environment {
         GitDirPC = 'C:\\Users\\Juan\\Documents\\GitHub\\ci-cd'
+		GitDirDebug = "${GitDirPC}\\Debug"
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
 		NombreProyecto = ''
     }
@@ -13,7 +14,7 @@ pipeline {
                 script {
                     echo "GitDirPC: ${env.GitDirPC}"
                     echo "GitDirTools: ${env.GitDirTools}"
-					echo "NombreProyecto: ${env.NombreProyecto}"
+					echo "${env.GitDirDebug}"
                 }
             }
         }
