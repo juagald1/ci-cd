@@ -4,7 +4,7 @@ pipeline {
     environment {
         GitDirPC = 'C:\\Users\\Juan\\Documents\\GitHub\\ci-cd'
 		GitDirDebug = "${GitDirPC}\\Debug"
-        GitDirTools = "${GitDirPC}\\ci_cd_tools"
+        GitDirTools = "${GitDirPC}\\ci_cd_tools\\NombreProyecto.bat"
 		NombreProyecto = ''
     }
 
@@ -12,7 +12,7 @@ pipeline {
         stage('Check Ver Compilador 22.6.0') {
             steps {
                 script {
-                    bat "cd ${GitDirTools} && .\\${NombreProyecto}.bat"				
+                    bat "cd ${GitDirTools} && ${GitDirTools} ${GitDirDebug}"			
                 }
             }
         }
