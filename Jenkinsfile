@@ -12,8 +12,7 @@ pipeline {
         stage('Check Ver Compilador 22.6.0') {
             steps {
                 script {
-                    bat "cd ${GitDirTools} && ${GitDirTools} ${GitDirDebug}"			
-                }
+					bat "call ${GitDirTools} ${GitDirDebug}"                
             }
         }
     }
