@@ -2,7 +2,7 @@
 <link_info>
    <banner>TMS320C2000 Linker PC v22.6.0.LTS</banner>
    <copyright>Copyright (c) 1996-2018 Texas Instruments Incorporated</copyright>
-   <link_time>0x6559eda1</link_time>
+   <link_time>0x6559ee0d</link_time>
    <link_errors>0x0</link_errors>
    <output_file>test_28027.out</output_file>
    <entry_point>
@@ -200,70 +200,70 @@
          <name>.debug_info</name>
          <load_address>0x0</load_address>
          <run_address>0x0</run_address>
-         <size>0x2d9</size>
+         <size>0x2e3</size>
          <input_file_ref idref="fl-2"/>
       </object_component>
       <object_component id="oc-18">
          <name>.debug_info</name>
-         <load_address>0x2d9</load_address>
-         <run_address>0x2d9</run_address>
+         <load_address>0x2e3</load_address>
+         <run_address>0x2e3</run_address>
          <size>0x173</size>
          <input_file_ref idref="fl-12"/>
       </object_component>
       <object_component id="oc-1c">
          <name>.debug_info</name>
-         <load_address>0x44c</load_address>
-         <run_address>0x44c</run_address>
+         <load_address>0x456</load_address>
+         <run_address>0x456</run_address>
          <size>0x4fa</size>
          <input_file_ref idref="fl-13"/>
       </object_component>
       <object_component id="oc-21">
          <name>.debug_info</name>
-         <load_address>0x946</load_address>
-         <run_address>0x946</run_address>
+         <load_address>0x950</load_address>
+         <run_address>0x950</run_address>
          <size>0x3d3</size>
          <input_file_ref idref="fl-14"/>
       </object_component>
       <object_component id="oc-26">
          <name>.debug_info</name>
-         <load_address>0xd19</load_address>
-         <run_address>0xd19</run_address>
+         <load_address>0xd23</load_address>
+         <run_address>0xd23</run_address>
          <size>0x346</size>
          <input_file_ref idref="fl-15"/>
       </object_component>
       <object_component id="oc-2b">
          <name>.debug_info</name>
-         <load_address>0x105f</load_address>
-         <run_address>0x105f</run_address>
+         <load_address>0x1069</load_address>
+         <run_address>0x1069</run_address>
          <size>0x343</size>
          <input_file_ref idref="fl-16"/>
       </object_component>
       <object_component id="oc-30">
          <name>.debug_info</name>
-         <load_address>0x13a2</load_address>
-         <run_address>0x13a2</run_address>
+         <load_address>0x13ac</load_address>
+         <run_address>0x13ac</run_address>
          <size>0x4dd</size>
          <input_file_ref idref="fl-17"/>
       </object_component>
       <object_component id="oc-37">
          <name>.debug_info</name>
-         <load_address>0x187f</load_address>
-         <run_address>0x187f</run_address>
+         <load_address>0x1889</load_address>
+         <run_address>0x1889</run_address>
          <size>0x465</size>
          <input_file_ref idref="fl-18"/>
       </object_component>
       <object_component id="oc-3c">
          <name>.debug_info</name>
-         <load_address>0x1ce4</load_address>
-         <run_address>0x1ce4</run_address>
+         <load_address>0x1cee</load_address>
+         <run_address>0x1cee</run_address>
          <size>0x3ee</size>
          <input_file_ref idref="fl-19"/>
       </object_component>
       <object_component id="oc-67">
          <name>.debug_info</name>
-         <load_address>0x20d2</load_address>
-         <run_address>0x20d2</run_address>
-         <size>0x94</size>
+         <load_address>0x20dc</load_address>
+         <run_address>0x20dc</run_address>
+         <size>0x9e</size>
       </object_component>
       <object_component id="oc-12">
          <name>.debug_frame</name>
@@ -634,7 +634,7 @@
          <name>.debug_info</name>
          <load_address>0x0</load_address>
          <run_address>0x0</run_address>
-         <size>0x2166</size>
+         <size>0x217a</size>
          <contents>
             <object_component_ref idref="oc-11"/>
             <object_component_ref idref="oc-18"/>
