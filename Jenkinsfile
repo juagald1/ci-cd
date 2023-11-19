@@ -5,7 +5,7 @@ pipeline {
         GitDirPC = 'C:\\Users\\Juan\\Documents\\GitHub\\ci-cd'
         GitDirDebug = "${GitDirPC}\\Debug"
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
-        NombreProyecto = 'NombreProyecto.bat'
+        NombreProyecto = ''
     }
 
     stages {
@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Ejecutar el archivo .bat desde el directorio de herramientas con el directorio de depuración como argumento
-                    bat "call \"${GitDirTools}\\${NombreProyecto}\" \"${GitDirDebug}\""
+					bat "call \"${GitDirTools}\\${NombreProyecto}.bat\" \"${GitDirDebug}\""
                 }
             }
         }
