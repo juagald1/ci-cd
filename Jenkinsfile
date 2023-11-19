@@ -4,7 +4,7 @@ pipeline {
     environment {
         GitDirPC = 'C:\\Users\\Juan\\Documents\\GitHub\\ci-cd'
 		GitDirDebug = "${GitDirPC}\\Debug"
-        GitDirTools = "${GitDirPC}\\ci_cd_tools"
+        GitDirTools = "${GitDirPC}\\ci-cd-tools"
 		NombreProyecto = ''
     }
 
