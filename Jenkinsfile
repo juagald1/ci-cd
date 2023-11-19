@@ -5,6 +5,8 @@ pipeline {
         GitDirPC = 'C:\\Users\\Juan\\Documents\\GitHub\\ci-cd'
         GitDirDebug = "${GitDirPC}\\Debug"
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
+		SalidaBat = ''
+
     }
 
     stages {
@@ -13,8 +15,9 @@ pipeline {
                 script {
                     // Se completa la ruta de tools con el archivo .bat y se añade como argumento de enrtada al .bat, la ruta donde debe buscar el archivo. out
 					//bat "call \"${GitDirTools}\\NombreProyecto.bat\" \"${GitDirDebug}\""
-                    def codigoSalida = bat(script: "call \"${GitDirTools}\\NombreProyecto.bat\" \"${GitDirDebug}\"", returnStatus: true)
-                    echo "El código de salida es: ${codigoSalida}"
+					SalidaBat = bat(script: "call \"${GitDirTools}\\NombreProyecto.bat\" \"${GitDirDebug}\"", returnStatus: false, returnStdout: true).trim()
+
+                    echo "La salida del bat es: ${SalidaBat}"
                 }
             }
         }
