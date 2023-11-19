@@ -1,9 +1,9 @@
 ******************************************************************************
              TMS320C2000 Linker PC v22.6.0                     
 ******************************************************************************
->> Linked Sat Nov 18 10:03:32 2023
+>> Linked Sun Nov 19 12:12:33 2023
 
-OUTPUT FILE NAME:   <Test_Jenkins.out>
+OUTPUT FILE NAME:   <test_28027.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 00008000
 
 
@@ -13,8 +13,8 @@ MEMORY CONFIGURATION
 ----------------------  --------  ---------  --------  --------  ----  --------
 PAGE 0:
   BEGIN                 00000000   00000002  00000000  00000002  RWIX
-  RAMM0                 00000050   000003b0  0000001e  00000392  RWIX
-  PRAML0                00008000   00000900  000000df  00000821  RWIX
+  RAMM0                 00000050   000003b0  0000001a  00000396  RWIX
+  PRAML0                00008000   00000900  000000dd  00000823  RWIX
   IQTABLES              003fe000   00000b50  00000000  00000b50  RWIX
   IQTABLES2             003feb50   0000008c  00000000  0000008c  RWIX
   IQTABLES3             003febdc   000000aa  00000000  000000aa  RWIX
@@ -24,7 +24,7 @@ PAGE 0:
 PAGE 1:
   BOOT_RSVD             00000002   0000004e  00000000  0000004e  RWIX
   RAMM1                 00000400   00000400  00000300  00000100  RWIX
-  DRAML0                00008900   00000700  0000000b  000006f5  RWIX
+  DRAML0                00008900   00000700  0000000a  000006f6  RWIX
 
 
 SECTION ALLOCATION MAP
@@ -32,23 +32,22 @@ SECTION ALLOCATION MAP
  output                                  attributes/
 section   page    origin      length       input sections
 --------  ----  ----------  ----------   ----------------
-.cinit     0    00000050    0000001e     
+.cinit     0    00000050    0000001a     
                   00000050    0000000e     rts2800_ml.lib : exit.c.obj (.cinit)
                   0000005e    00000005                    : _lock.c.obj (.cinit:__lock)
                   00000063    00000005                    : _lock.c.obj (.cinit:__unlock)
-                  00000068    00000004     main.obj (.cinit)
-                  0000006c    00000002     --HOLE-- [fill = 0]
+                  00000068    00000002     --HOLE-- [fill = 0]
 
-.text      0    00008000    000000df     
+.text      0    00008000    000000dd     
                   00008000    00000054     rts2800_ml.lib : boot28.asm.obj (.text)
                   00008054    00000029                    : exit.c.obj (.text)
                   0000807d    00000024                    : cpy_tbl.c.obj (.text)
                   000080a1    0000001d                    : memcpy.c.obj (.text)
                   000080be    00000011                    : args_main.c.obj (.text)
                   000080cf    00000009                    : _lock.c.obj (.text)
-                  000080d8    00000004     main.obj (.text)
-                  000080dc    00000002     rts2800_ml.lib : pre_init.c.obj (.text)
-                  000080de    00000001                    : startup.c.obj (.text)
+                  000080d8    00000002     main.obj (.text)
+                  000080da    00000002     rts2800_ml.lib : pre_init.c.obj (.text)
+                  000080dc    00000001                    : startup.c.obj (.text)
 
 .pinit     0    00000050    00000000     UNINITIALIZED
 
@@ -58,20 +57,19 @@ section   page    origin      length       input sections
 .stack     1    00000400    00000300     UNINITIALIZED
                   00000400    00000300     --HOLE--
 
-.ebss      1    00008900    0000000b     UNINITIALIZED
+.ebss      1    00008900    0000000a     UNINITIALIZED
                   00008900    00000006     rts2800_ml.lib : exit.c.obj (.ebss)
                   00008906    00000002                    : _lock.c.obj (.ebss:__lock)
                   00008908    00000002                    : _lock.c.obj (.ebss:__unlock)
-                  0000890a    00000001     main.obj (.ebss)
 
 MODULE SUMMARY
 
        Module            code   initialized data   uninitialized data
        ------            ----   ----------------   ------------------
     .\
-       main.obj          4      4                  1                 
+       main.obj          2      0                  0                 
     +--+-----------------+------+------------------+--------------------+
-       Total:            4      4                  1                 
+       Total:            2      0                  0                 
                                                                      
     C:\ti\ccs1200\ccs\tools\compiler\ti-cgt-c2000_22.6.0.LTS\lib\rts2800_ml.lib
        boot28.asm.obj    84     0                  0                 
@@ -87,7 +85,7 @@ MODULE SUMMARY
                                                                      
        Stack:            0      0                  768               
     +--+-----------------+------+------------------+--------------------+
-       Grand Total:      223    28                 779               
+       Grand Total:      221    24                 778               
 
 
 GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
@@ -101,7 +99,6 @@ address     data page           name
 00008904     224 (00008900)     ___TI_dtors_ptr
 00008906     224 (00008900)     __lock
 00008908     224 (00008900)     __unlock
-0000890a     224 (00008900)     _backticker
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
@@ -121,7 +118,7 @@ abs   ffffffff  ___TI_prof_data_start
 abs   ffffffff  ___binit__                      
 abs   ffffffff  ___c_args__                     
 0     00000050  ___cinit__                      
-0     000080df  ___etext__                      
+0     000080dd  ___etext__                      
 abs   ffffffff  ___pinit__                      
 0     00008000  ___text__                       
 0     000080be  __args_main                     
@@ -130,11 +127,10 @@ abs   ffffffff  ___pinit__
 0     000080d3  __register_lock                 
 0     000080cf  __register_unlock               
 1     00000400  __stack                         
-0     000080de  __system_post_cinit             
-0     000080dc  __system_pre_init               
+0     000080dc  __system_post_cinit             
+0     000080da  __system_pre_init               
 1     00008908  __unlock                        
 0     00008054  _abort                          
-1     0000890a  _backticker                     
 0     00008000  _c_int00                        
 0     0000807d  _copy_in                        
 0     00008056  _exit                           
@@ -142,7 +138,7 @@ abs   ffffffff  ___pinit__
 0     000080a1  _memcpy                         
 abs   ffffffff  binit                           
 0     00000050  cinit                           
-0     000080df  etext                           
+0     000080dd  etext                           
 abs   ffffffff  pinit                           
 
 
@@ -165,10 +161,10 @@ page  address   name
 0     000080d3  __register_lock                 
 0     000080d7  __nop                           
 0     000080d8  _main                           
-0     000080dc  __system_pre_init               
-0     000080de  __system_post_cinit             
-0     000080df  ___etext__                      
-0     000080df  etext                           
+0     000080da  __system_pre_init               
+0     000080dc  __system_post_cinit             
+0     000080dd  ___etext__                      
+0     000080dd  etext                           
 1     00000400  __stack                         
 1     00000700  __STACK_END                     
 1     00008900  ___TI_enable_exit_profile_output
@@ -176,7 +172,6 @@ page  address   name
 1     00008904  ___TI_dtors_ptr                 
 1     00008906  __lock                          
 1     00008908  __unlock                        
-1     0000890a  _backticker                     
 abs   00000300  __STACK_SIZE                    
 abs   ffffffff  ___TI_pprof_out_hndl            
 abs   ffffffff  ___TI_prof_data_size            
@@ -187,4 +182,4 @@ abs   ffffffff  ___pinit__
 abs   ffffffff  binit                           
 abs   ffffffff  pinit                           
 
-[36 symbols]
+[35 symbols]

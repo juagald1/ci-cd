@@ -1,13 +1,9 @@
-#include "stdint.h"
-
-int backticker=0;
 
 
-void main(void)
+/**
+ * main.c
+ */
+int main(void)
 {
-	while(1)
-	{
-	    backticker++;
-
-	}
+	return 0;
 }
