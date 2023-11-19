@@ -12,7 +12,7 @@ pipeline {
 
     post {
         always {
-            // Puedes agregar acciones adicionales que se ejecutarán siempre, independientemente del resultado.
+            cleanWs()
         }
     }
 }
