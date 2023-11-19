@@ -10,14 +10,14 @@ pipeline {
     }
 
     stages {
-        stage('Nombre Proyecto') {
+        stage('Nombre Proyecto CCS') {
             steps {
                 script {
                     // 1 Se completa la ruta de tools con el archivo .bat 
 					// 2 Se añade como argumento de entrada al archivo .bat, la ruta donde debe buscar el archivo. out
 					// 3 Se guarda el nombre del proyecto en variable entorno
 					NombreProyecto = bat(script: "call \"${GitDirTools}\\NombreProyecto.bat\" \"${GitDirDebug}\"", returnStatus: false, returnStdout: true).trim()
-                    echo "${SalidaBat}"
+                    echo "${NombreProyecto}"
                 }
             }
         }
