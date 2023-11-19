@@ -9,7 +9,7 @@ pipeline {
     }
 
     stages {
-        stage('Check Ver Compilador 22.6.0') {
+        stage('Nombre Proyecto') {
             steps {
                 script {
                     // Ejecutar el archivo .bat desde el directorio de herramientas con el directorio de depuración como argumento
