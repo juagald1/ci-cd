@@ -21,6 +21,13 @@ pipeline {
                 }
             }
         }
+		stage('Version Compilador TI') {
+            steps {
+                script {
+
+                }
+            }
+        }
     }
 
     post {
