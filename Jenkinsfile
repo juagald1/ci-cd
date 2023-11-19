@@ -4,8 +4,11 @@ pipeline {
     stages {
         stage('Version Compilador 22.6.0') {
             steps {
-                bat script: 'C:\\Users\\Juan\\Documents\\GitHub\\ci-cd\\ci_cd_tools\\buscar_palabra.bat', 
-                    label: 'Run script'
+                script {
+                    def toolDir = 'C:\\Users\\Juan\\Documents\\GitHub\\ci-cd\\ci_cd_tools'
+
+                        bat "${toolDir}\\buscar_palabra.bat \"
+                }
             }
         }
     }
@@ -16,3 +19,4 @@ pipeline {
         }
     }
 }
+
