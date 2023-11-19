@@ -24,7 +24,7 @@ pipeline {
 		stage('Version Compilador TI') {
             steps {
                 script {
-
+                    echo "${NombreProyecto}"
                 }
             }
         }
