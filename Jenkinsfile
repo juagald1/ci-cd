@@ -6,6 +6,7 @@ pipeline {
         GitDirDebug = "${GitDirPC}\\Debug"
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
 		NombreProyecto = ''
+		VersionCompiladorTI = 'v22.6.0'
 
     }
 
@@ -24,8 +25,8 @@ pipeline {
 		stage('Version Compilador TI') {
             steps {
                 script {
-					error("OLA")
-                    //echo "${NombreProyecto}"
+					bat "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${VersionCompiladorTI}\""
+
                 }
             }
         }
