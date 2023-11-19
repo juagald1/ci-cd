@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Ejecutar script de búsqueda') {
+        stage('Version Compilador 22.6.0') {
             steps {
                 bat script: 'C:\\Users\\Juan\\Documents\\GitHub\\ci-cd\\ci_cd_tools\\buscar_palabra.bat', 
                     label: 'Run script'
