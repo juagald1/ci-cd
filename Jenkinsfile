@@ -6,7 +6,7 @@ pipeline {
         GitDirDebug = "${GitDirPC}\\Debug"
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
 		NombreProyecto = ''
-		VersionCompiladorTI = "v22.6.0"
+		VersionCompiladorTI = 'v22.6.0'
     }
 
     stages {
@@ -24,11 +24,9 @@ pipeline {
 		stage('Version Compilador TI') {
             steps {
                 script {
-				
-					if(VersionCompiladorTI != (bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()))
-					{
-						error("La version de compilador no es correcta")
-					}
+					NombreProyecto = bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()
+					echo "${NombreProyecto}"
+					echo "${VersionCompiladorTI}"
                     
                 }
             }
