@@ -24,8 +24,12 @@ pipeline {
 		stage('Version Compilador TI') {
             steps {
                 script {
-					NombreProyecto = bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()
-                    echo "${NombreProyecto}"
+				
+					if(VersionCompiladorTI != bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim())
+					{
+						error("La version de compilador no es correcta")
+					}
+                    
                 }
             }
         }
