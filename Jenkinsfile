@@ -6,7 +6,7 @@ pipeline {
         GitDirDebug = "${GitDirPC}\\Debug"
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
 		NombreProyecto = ''
-		VersionCompiladorTI = 'v22.6.0'
+		VersionCompiladorTI = 'v22.5.0'
     }
 
     stages {
