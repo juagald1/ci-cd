@@ -7,5 +7,5 @@ REM 4 Carpeta Debug de proyecto (-ccs.configuration)
 set workspace=%1
 set proyecto=%2
 
-REM C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data "%workspace%" -application com.ti.ccstudio.apps.projectBuild -ccs.projects "%proyecto%" -ccs.configuration Debug
-C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data C:\Users\Usuario\workspace -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug
+C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data "%workspace%" -application com.ti.ccstudio.apps.projectBuild -ccs.projects "%proyecto%" -ccs.configuration Debug
+REM C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data C:\Users\Usuario\workspace -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug
