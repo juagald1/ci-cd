@@ -6,4 +6,6 @@
 
 // nota: permite compilar un proyecto, por tanto si el proyecto tiene mas de una cpu abra que ejecutar el comando dos veces (una por cpu)
 
-eclipsec -noSplash -data "C:\Users\Usuario\workspace" -application com.ti.ccstudio.apps.projectBuild -ccs.projects DVR_cpu01 -ccs.configuration Debug
+eclipsec -noSplash -data "C:\Users\Usuario\workspace" -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug
+
+C:\Users\Usuario\Documents\GitHub\ci-cd\ci_cd_tools>CompilarProyecto.bat "C:\Users\Usuario\workspace" test_28027
