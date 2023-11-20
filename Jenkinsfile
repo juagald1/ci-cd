@@ -6,6 +6,8 @@ pipeline {
         GitDirDebug = "${GitDirPC}\\Debug"
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
 		
+		DirWorkspace = 'C:\\Users\\Usuario\\workspace'
+		
 		NombreProyecto = ''
 		VersionCompiladorTI = 'v22.6.0'									//Completar por usuario version de compilador TI del proyecto
     }
@@ -34,10 +36,10 @@ pipeline {
                 }
             }
         }
-		stage('Linker Correcto') {
+		stage('Compila Proyecto') {
             steps {
                 script {
-					error 'no implementado'
+					bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" "${DirWorkspace}" "${NombreProyecto}"", returnStatus: false, returnStdout: true).trim()
                 }
             }
         }

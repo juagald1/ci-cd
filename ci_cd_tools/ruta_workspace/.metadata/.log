@@ -1,0 +1,26 @@
+!SESSION 2023-11-20 13:00:15.193 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.13
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data ruta_workspace -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug
+
+!ENTRY com.ti.common.core 1 0 2023-11-20 13:00:16.361
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2023-11-20 13:00:16.363
+!MESSAGE debugServerDir=C:/ti/ccs1120/ccs/ccs_base/DebugServer
+!SESSION 2023-11-20 13:00:33.265 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.13
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data ruta_workspace -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug
+
+!ENTRY com.ti.common.core 1 0 2023-11-20 13:00:34.437
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2023-11-20 13:00:34.439
+!MESSAGE debugServerDir=C:/ti/ccs1120/ccs/ccs_base/DebugServer
