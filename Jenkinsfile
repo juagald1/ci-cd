@@ -32,13 +32,20 @@ pipeline {
                 script {
 					def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\"", returnStatus: true)
 					
+					if(result == 0)
+					{
+						error 'Revisar rutas de proyecto y workspace'
+					}
+					
 					if(result == 1)
+					{						
+						echo "Compilacion correcta"
+					}					
+					
+					if(result == 2)
 					{
 						error 'Error de compilacion'
 					}					
-					
-					//bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" \"${DirWorkspace}\" \"${NombreProyecto}\"", returnStatus: false, returnStdout: true).trim()
-					//bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" \"${DirWorkspace}\" \"${NombreProyecto}\"", returnStatus: false, returnStdout: true).trim()				
                 }
             }
         }

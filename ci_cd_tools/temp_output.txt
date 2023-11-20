@@ -1,6 +1,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-CCS headless build starting... [Mon Nov 20 16:51:14 CET 2023] 
+CCS headless build starting... [Mon Nov 20 16:59:38 CET 2023] 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ================================================================================
@@ -18,16 +18,17 @@ Building...
 Building file: "../main.c"
 Invoking: C2000 Compiler
 "C:/ti/ccs1120/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/bin/cl2000" -v28 -ml -mt --include_path="C:/Users/Usuario/Documents/GitHub/ci-cd" --include_path="C:/ti/ccs1120/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include" -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+Finished building: "../main.c"
  
->> Compilation failure
-subdir_rules.mk:9: recipe for target 'main.obj' failed
-"../main.c", line 9: error #66: expected a ";"
-1 error detected in the compilation of "../main.c".
-gmake: *** [main.obj] Error 1
-gmake: Target 'all' not remade because of errors.
+Building target: "test_28027.out"
+Invoking: C2000 Linker
+"C:/ti/ccs1120/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/bin/cl2000" -v28 -ml -mt -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"test_28027.map" --stack_size=0x300 --warn_sections -i"C:/ti/ccs1120/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/lib" -i"C:/ti/ccs1120/ccs/tools/compiler/ti-cgt-c2000_22.6.0.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="test_28027_linkInfo.xml" --rom_model -o "test_28027.out" "./main.obj" "../28027_RAM_lnk.cmd"  -llibc.a 
+<Linking>
+Finished building target: "test_28027.out"
+ 
 
 **** Build Finished ****
 
 
 ================================================================================
-CCS headless build complete! 1 out of 1 projects have errors.
+CCS headless build complete! 0 out of 1 projects have errors.
