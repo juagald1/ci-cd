@@ -27,7 +27,7 @@ pipeline {
                 }
             }
         }
-		stage('Compilación Proyecto') {
+		stage('Compilacion Proyecto') {
             steps {
                 script {
 					def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\"", returnStatus: true)
@@ -39,7 +39,7 @@ pipeline {
 					
 					if(result == 1)
 					{						
-						echo "Compilación OK"
+						echo "Compilacion OK"
 					}					
 					
 					if(result == 2)
