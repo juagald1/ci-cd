@@ -26,7 +26,7 @@ pipeline {
             steps {
                 script {
 					bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()
-					echo "Version Compilador TI \"${NombreProyecto}\" correcta"			
+					echo "Version Compilador TI \"${VersionCompiladorTI}\" correcta"			
 					
                 }
             }
