@@ -7,6 +7,8 @@ pipeline {
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
 		
 		DirWorkspace = 'C:\\Users\\Usuario\\workspace'
+		PATH = "${tool 'Eclipse'}\\eclipsec:${env.PATH}"
+
 		
 		NombreProyecto = 'test_28027'
 		NombreProyecto1 = 'test_28027'
@@ -40,13 +42,7 @@ pipeline {
 		stage('Compila Proyecto') {
             steps {
                 script {
-					def result = bat(script: "eclipsec -noSplash -data 'C:\\Users\\Usuario\\workspace' -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug", returnStatus: true)
-					
-					if (result == 0) {
-                        echo "CMD command executed successfully."
-                    } else {
-                        error "Error: CMD command execution failed with exit code ${result}."
-                    }										
+					bat "\"${tool 'Eclipse'}\\eclipsec\" -noSplash -data 'C:\\Users\\Usuario\\workspace' -application com.ti.ccstudio.apps.projectBuild -ccs.projects MyProject -ccs.configuration Debug"											
 					
                 }
             }
