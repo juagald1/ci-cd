@@ -39,12 +39,12 @@ pipeline {
 					
 					if(result == 1)
 					{						
-						echo "Compilacion correcta"
+						echo "Compilación OK"
 					}					
 					
 					if(result == 2)
 					{
-						error 'Error de compilacion'
+						error 'Error de compilación'
 					}					
                 }
             }
