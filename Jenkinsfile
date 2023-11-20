@@ -27,7 +27,7 @@ pipeline {
                 }
             }
         }
-		stage('TI') {
+		stage('Compilación Proyecto') {
             steps {
                 script {
 					def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\"", returnStatus: true)
