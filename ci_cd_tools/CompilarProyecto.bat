@@ -11,7 +11,7 @@ rem C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data "%workspace%" -applicatio
 
 rem Ejecutar el comando '>' y guarda la salida en archivo temporal
 set "archivoTemporal=temp_output.txt"
-C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data "%workspace%" -application com.ti.ccstudio.apps.projectBuild -ccs.projects "%proyecto%" -ccs.configuration Debug > "%archivoTemporal%"
+C:\ti\ccs1200\ccs\eclipse\eclipsec -noSplash -data "%workspace%" -application com.ti.ccstudio.apps.projectBuild -ccs.projects "%proyecto%" -ccs.configuration Debug > "%archivoTemporal%"
 
 rem Imprimir .txt
 type "%archivoTemporal%"
@@ -40,8 +40,3 @@ if %errorlevel% equ 0 (
 	del "temp_output.txt"
 	exit /b 2
 )
-
-
-
-
-REM C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data C:\Users\Usuario\workspace -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug
