@@ -7,15 +7,13 @@ pipeline {
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
 						
 		VersionCompiladorTI = 'v22.6.0'									//Completar por usuario version de compilador TI del proyecto
+		
+		JAVA_HOME = 'C:\\Program Files\\Eclipse Adoptium\\jdk-11.0.13.8-hotspot\\'
+        PATH = "${env.JAVA_HOME}\\bin;${env.PATH}"
     }
 
     stages {
-	    stage('Set Environment Variables') {
-            steps {
-                bat 'setx JAVA_HOME "C:\\Program Files\\Eclipse Adoptium\\jdk-11.0.13.8-hotspot\\" /M'
-				echo %JAVA_HOME% 
-            }
-		}
+
         stage('Nombre Proyecto CCS') {
             steps {
                 script {
@@ -42,7 +40,7 @@ pipeline {
 		stage('TI') {
             steps {
                 script {
-					echo %JAVA_HOME% 		
+					bat 'java -version'
                 }
             }
         }
