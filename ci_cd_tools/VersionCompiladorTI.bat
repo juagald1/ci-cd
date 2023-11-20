@@ -13,9 +13,9 @@ findstr /C:"%frase_a_buscar%" "%ruta_archivo%" >nul
 
 :: Comprobar el código de salida de findstr
 if %errorlevel% equ 0 (
-    echo %frase_a_buscar%	
+    echo La version del compilador %frase_a_buscar% es correcta
     exit /b 0
 ) else (
-	echo La version del compilador no coincide
+	echo La version del compilador no coincide 
     exit /b 1
 )
