@@ -37,7 +37,7 @@ pipeline {
 		stage('Linker Correcto') {
             steps {
                 script {
-					echo "Desarrollar aqui codigo linker"
+					
                 }
             }
         }
