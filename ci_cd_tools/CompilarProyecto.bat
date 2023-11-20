@@ -18,21 +18,21 @@ type "%archivoTemporal%"
 
 rem Buscar una palabra específica dentro del archivo temporal
 set "palabraABuscar=CCS headless build complete! 0 out of 0 projects have errors."
-findstr /C:"%palabraABuscar%" "%archivoTemporal%"
+findstr /C:"%palabraABuscar%" "%archivoTemporal%" > nul
 
 if %errorlevel% equ 0 (
 	exit /b 0
 )
 
 set "palabraABuscar=CCS headless build complete! 0 out of 1 projects have errors."
-findstr /C:"%palabraABuscar%" "%archivoTemporal%"
+findstr /C:"%palabraABuscar%" "%archivoTemporal%" > nul
 
 if %errorlevel% equ 0 (
 	exit /b 1
 )
 
 set "palabraABuscar=CCS headless build complete! 1 out of 1 projects have errors."
-findstr /C:"%palabraABuscar%" "%archivoTemporal%"
+findstr /C:"%palabraABuscar%" "%archivoTemporal%" > nul
 
 if %errorlevel% equ 0 (
 	exit /b 2
