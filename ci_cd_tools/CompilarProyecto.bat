@@ -21,6 +21,7 @@ set "palabraABuscar=CCS headless build complete! 0 out of 0 projects have errors
 findstr /C:"%palabraABuscar%" "%archivoTemporal%" > nul
 
 if %errorlevel% equ 0 (
+	del "temp_output.txt"
 	exit /b 0
 )
 
@@ -28,6 +29,7 @@ set "palabraABuscar=CCS headless build complete! 0 out of 1 projects have errors
 findstr /C:"%palabraABuscar%" "%archivoTemporal%" > nul
 
 if %errorlevel% equ 0 (
+	del "temp_output.txt"
 	exit /b 1
 )
 
@@ -35,10 +37,11 @@ set "palabraABuscar=CCS headless build complete! 1 out of 1 projects have errors
 findstr /C:"%palabraABuscar%" "%archivoTemporal%" >nul
 
 if %errorlevel% equ 0 (
+	del "temp_output.txt"
 	exit /b 2
 )
 
-del "temp_output.txt"
+
 
 
 REM C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data C:\Users\Usuario\workspace -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug
