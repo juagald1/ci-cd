@@ -33,6 +33,13 @@ pipeline {
                 }
             }
         }
+		stage('TI') {
+            steps {
+                script {
+					echo %JAVA_HOME% 		
+                }
+            }
+        }
     }
 
     post {
