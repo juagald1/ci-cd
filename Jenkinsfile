@@ -44,7 +44,7 @@ pipeline {
                     bat "cd \"${GitDirTools}\""
 
                     // Execute the batch script without arguments
-                    bat "call CompilarProyecto.bat"
+                    //bat "call CompilarProyecto.bat"
 
                     // Alternatively, if you want to capture the exit code
                     def result = bat(script: "call CompilarProyecto.bat", returnStatus: true)
