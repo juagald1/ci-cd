@@ -44,10 +44,13 @@ pipeline {
 						echo "DirWorkspace: ${DirWorkspace}"
 						echo "NombreProyecto: ${NombreProyecto1}"
 
-						def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" \"${DirWorkspace}\" \"${NombreProyecto1}\"", returnStatus: false, returnStdout: true).trim()
+						// Change to the tools directory
+						bat "cd \"${GitDirTools}\""
+
+						// Execute the batch script
+						def result = bat(script: "call \"CompilarProyecto.bat\" \"${DirWorkspace}\" \"${NombreProyecto1}\"", returnStatus: false, returnStdout: true).trim()
 
 						echo "Result: ${result}"
-
                 }
             }
         }
