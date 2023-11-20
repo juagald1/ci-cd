@@ -40,7 +40,7 @@ pipeline {
 		stage('TI') {
             steps {
                 script {
-					bat 'eclipse -version'
+					bat 'eclipse.exe'
                 }
             }
         }
