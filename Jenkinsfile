@@ -8,7 +8,7 @@ pipeline {
 		
 		DirWorkspace = 'C:\\Users\\Usuario\\workspace'
 		
-		NombreProyecto = ''
+		NombreProyecto = 'test_28027'
 		VersionCompiladorTI = 'v22.6.0'									//Completar por usuario version de compilador TI del proyecto
     }
 
@@ -39,7 +39,6 @@ pipeline {
 		stage('Compila Proyecto') {
             steps {
                 script {
-					NombreProyecto = bat(script: "call \"${GitDirTools}\\NombreProyecto.bat\" \"${GitDirDebug}\"", returnStatus: false, returnStdout: true).trim()
 					bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" "${DirWorkspace}" "${NombreProyecto}"", returnStatus: false, returnStdout: true).trim()
 
                 }
