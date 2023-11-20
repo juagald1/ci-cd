@@ -14,14 +14,13 @@ set "archivoTemporal=temp_output.txt"
 C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data C:\Users\Usuario\workspace -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug > "%archivoTemporal%"
 
 rem Imprimir .txt
-rem type "%archivoTemporal%"
+type "%archivoTemporal%"
 
 rem Buscar una palabra específica dentro del archivo temporal
 set "palabraABuscar=CCS headless build complete! 1 out of 1 projects have errors."
 findstr /C:"%palabraABuscar%" "%archivoTemporal%"
 
 if %errorlevel% equ 0 (
-    echo Encontrado!!
 	exit /b 1
 )
 
