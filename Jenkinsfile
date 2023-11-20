@@ -37,6 +37,12 @@ pipeline {
 					
 					echo "${VersionCompiladorTISinComillas}"
 					echo "${VersionCompiladorTI}"
+					
+					 if (VersionCompiladorTISinComillas == VersionCompiladorTI) {
+                        echo "Las variables son iguales"
+                    } else {
+                        echo "Las variables son diferentes"
+                    }
                     
                 }
             }
