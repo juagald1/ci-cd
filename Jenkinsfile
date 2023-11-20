@@ -35,13 +35,6 @@ pipeline {
                 }
             }
         }
-		stage('Compila Proyecto') {
-            steps {
-                script {									
-					
-                }
-            }
-        }
     }
 
     post {
