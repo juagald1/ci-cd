@@ -3,14 +3,12 @@ pipeline {
 	
     environment {
         GitDirPC = 'C:\\Users\\Usuario\\Documents\\GitHub\\ci-cd'		//Completar por usuario ubicación del repositorio
-        GitDirDebug = "${GitDirPC}\\Debug"
-        GitDirTools = "${GitDirPC}\\ci_cd_tools"
-		
-		DirWorkspace ='C:\\Users\\Usuario\\workspace'
-						
+		DirWorkspace ='C:\\Users\\Usuario\\workspace'					//Completar por usuario ubicación del workspace		
 		VersionCompiladorTI = 'v22.6.0'									//Completar por usuario version de compilador TI del proyecto
 		NombreProyecto = 'test_28027'									//Completar por usuario nombre proyecto
 		
+        GitDirDebug = "${GitDirPC}\\Debug"
+        GitDirTools = "${GitDirPC}\\ci_cd_tools"												
     }
 
     stages {
@@ -30,7 +28,9 @@ pipeline {
 		stage('Compilacion Proyecto') {
             steps {
                 script {
-					def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\"", returnStatus: true)
+					//def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\"", returnStatus: true)
+					def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" ${DirWorkspace} ${NombreProyecto}", returnStatus: true)
+
 					
 					if(result == 0)
 					{
