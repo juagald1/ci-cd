@@ -6,9 +6,7 @@ pipeline {
         GitDirDebug = "${GitDirPC}\\Debug"
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
 		
-		DirWorkspace = 'C:\\Users\\Usuario\\workspace'
-		
-		NombreProyecto = 'test_28027'
+		VersionCompiladorTI = 'v22.6.0'									//Completar por usuario version de compilador TI del proyecto
     }
 
     stages {
