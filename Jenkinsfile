@@ -8,8 +8,6 @@ pipeline {
 						
 		VersionCompiladorTI = 'v22.6.0'									//Completar por usuario version de compilador TI del proyecto
 		
-		ECLIPSE = 'C:\\ti\\ccs1120\\ccs\\eclipse\\'
-        PATH = "${env.ECLIPSE}\\bin;${env.PATH}"
     }
 
     stages {
@@ -40,7 +38,8 @@ pipeline {
 		stage('TI') {
             steps {
                 script {
-					bat 'eclipse.exe'
+					def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\"", returnStatus: true)
+
                 }
             }
         }
