@@ -27,8 +27,9 @@ pipeline {
                 script {
 					def VersionCompiladorTIConComillas = bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()
 					def VersionCompiladorTISinComillas = VersionCompiladorTIConComillas.replaceAll('"', '')
+					def VersionCompiladorTISinEspacios = VersionCompiladorTISinComillas.trim()
 					
-					echo "Longitud de VersionCompiladorTISinComillas: ${VersionCompiladorTISinComillas.length()}"
+					echo "Longitud de VersionCompiladorTISinComillas: ${VersionCompiladorTISinEspacios.length()}"
 					echo "Longitud de VersionCompiladorTI: ${VersionCompiladorTI.length()}"
 					
 					//if(VersionCompiladorTISinComillas != VersionCompiladorTI)
