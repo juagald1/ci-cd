@@ -35,7 +35,6 @@ pipeline {
 					if(result == 0)
 					{
 						error 'Revisar rutas de proyecto y workspace'
-						currentBuild.result = 'UNSTABLE'
 					}
 					
 					if(result == 1)
@@ -45,8 +44,7 @@ pipeline {
 					
 					if(result == 2)
 					{
-						error 'Error de compilación'
-						currentBuild.result = 'UNSTABLE'
+						error 'Error de compilacion'
 					}					
                 }
             }
