@@ -7,12 +7,8 @@ pipeline {
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
 		
 		DirWorkspace = 'C:\\Users\\Usuario\\workspace'
-		PATH = "${tool 'Eclipse'}\\eclipsec:${env.PATH}"
-
 		
 		NombreProyecto = 'test_28027'
-		NombreProyecto1 = 'test_28027'
-		VersionCompiladorTI = 'v22.6.0'									//Completar por usuario version de compilador TI del proyecto
     }
 
     stages {
@@ -41,8 +37,7 @@ pipeline {
         }
 		stage('Compila Proyecto') {
             steps {
-                script {
-					bat "\"${tool 'Eclipse'}\\eclipsec\" -noSplash -data 'C:\\Users\\Usuario\\workspace' -application com.ti.ccstudio.apps.projectBuild -ccs.projects MyProject -ccs.configuration Debug"											
+                script {									
 					
                 }
             }
