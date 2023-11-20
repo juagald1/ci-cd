@@ -40,20 +40,15 @@ pipeline {
 		stage('Compila Proyecto') {
             steps {
                 script {
-					// Change to the tools directory
-                    bat "cd \"${GitDirTools}\""
-
-                    // Execute the batch script without arguments
-                    //bat "call CompilarProyecto.bat"
-
-                    // Alternatively, if you want to capture the exit code
-                    def result = bat(script: "call CompilarProyecto.bat", returnStatus: true)
-
-                    if (result == 0) {
-                        echo "Batch script executed successfully."
+					def result = bat(script: "eclipsec -noSplash -data "C:\Users\Usuario\workspace" -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug", returnStatus: true)
+					
+					if (result == 0) {
+                        echo "CMD command executed successfully."
                     } else {
-                        error "Error: Batch script execution failed with exit code ${result}."
+                        error "Error: CMD command execution failed with exit code ${result}."
                     }
+					
+					
                 }
             }
         }
