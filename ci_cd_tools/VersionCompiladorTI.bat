@@ -16,6 +16,6 @@ if %errorlevel% equ 0 (
     echo La version del compilador %frase_a_buscar% es correcta
     exit /b 0
 ) else (
-	echo La version del compilador no coincide 
+	echo La version del compilador %frase_a_buscar% no es valida
     exit /b 1
 )
