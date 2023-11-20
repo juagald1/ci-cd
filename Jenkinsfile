@@ -40,13 +40,10 @@ pipeline {
 		stage('Compila Proyecto') {
             steps {
                 script {
-					def result = bat(script: "eclipsec -noSplash -data "C:\Users\Usuario\workspace" -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug", returnStatus: true)
+					def result = bat(script: "eclipsec -noSplash -data 'C:\\Users\\Usuario\\workspace' -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug", returnStatus: true)
 					
-					if (result == 0) {
-                        echo "CMD command executed successfully."
-                    } else {
-                        error "Error: CMD command execution failed with exit code ${result}."
-                    }
+					
+
 					
 					
                 }
