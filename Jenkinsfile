@@ -26,11 +26,14 @@ pipeline {
             steps {
                 script {
 					def VersionCompiladorTIConComillas = bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()
-					def VersionCompiladorTISinComillas = VersionCompiladorTIConComillas.replaceAll('"', '')
-					def VersionCompiladorTISinEspacios = VersionCompiladorTISinComillas.trim()
 					
-					echo "Longitud de VersionCompiladorTISinComillas: ${VersionCompiladorTISinEspacios.length()}"
-					echo "Longitud de VersionCompiladorTI: ${VersionCompiladorTI.length()}"
+					def VersionCompiladorTISinComillas = VersionCompiladorTIConComillas.trim()					
+					
+					echo "Con comillas: [${VersionCompiladorTIConComillas}]"
+					echo "Sin comillas y sin espacios en blanco: [${VersionCompiladorTISinComillas}]"
+
+					//echo "Longitud de VersionCompiladorTISinComillas: ${VersionCompiladorTISinEspacios.length()}"
+					//echo "Longitud de VersionCompiladorTI: ${VersionCompiladorTI.length()}"
 					
 					//if(VersionCompiladorTISinComillas != VersionCompiladorTI)
 					//{
