@@ -11,3 +11,42 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data  -application co
 
 !ENTRY com.ti.common.core 1 0 2023-11-20 13:06:32.804
 !MESSAGE debugServerDir=C:/ti/ccs1120/ccs/ccs_base/DebugServer
+!SESSION 2023-11-20 16:28:54.795 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.13
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -application com.ti.ccstudio.apps.projectBuild -ccs.projects  -ccs.configuration Debug
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data  -application com.ti.ccstudio.apps.projectBuild -ccs.projects  -ccs.configuration Debug
+
+!ENTRY com.ti.common.core 1 0 2023-11-20 16:28:55.983
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2023-11-20 16:28:55.984
+!MESSAGE debugServerDir=C:/ti/ccs1120/ccs/ccs_base/DebugServer
+!SESSION 2023-11-20 16:30:02.542 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.13
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -application com.ti.ccstudio.apps.projectBuild -ccs.projects  -ccs.configuration Debug
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data  -application com.ti.ccstudio.apps.projectBuild -ccs.projects  -ccs.configuration Debug
+
+!ENTRY com.ti.common.core 1 0 2023-11-20 16:30:03.757
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2023-11-20 16:30:03.759
+!MESSAGE debugServerDir=C:/ti/ccs1120/ccs/ccs_base/DebugServer
+!SESSION 2023-11-20 16:31:59.255 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.13
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -application com.ti.ccstudio.apps.projectBuild -ccs.projects  -ccs.configuration Debug
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data  -application com.ti.ccstudio.apps.projectBuild -ccs.projects  -ccs.configuration Debug
+
+!ENTRY com.ti.common.core 1 0 2023-11-20 16:32:00.476
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 1 0 2023-11-20 16:32:00.478
+!MESSAGE debugServerDir=C:/ti/ccs1120/ccs/ccs_base/DebugServer

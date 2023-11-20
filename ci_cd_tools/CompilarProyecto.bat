@@ -7,5 +7,21 @@ REM 4 Carpeta Debug de proyecto (-ccs.configuration)
 set workspace=%1
 set proyecto=%2
 
-C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data "%workspace%" -application com.ti.ccstudio.apps.projectBuild -ccs.projects "%proyecto%" -ccs.configuration Debug
+rem C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data "%workspace%" -application com.ti.ccstudio.apps.projectBuild -ccs.projects "%proyecto%" -ccs.configuration Debug
+
+rem Ejecutar el comando '>' y guarda la salida en archivo temporal
+set "archivoTemporal=temp_output.txt"
+C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data C:\Users\Usuario\workspace -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug > "%archivoTemporal%"
+
+rem Imprimir .txt
+type "%archivoTemporal%"
+
+
+
+
+
+rem Espera opcional para que puedas ver el resultado antes de cerrar la ventana
+
+
+
 REM C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data C:\Users\Usuario\workspace -application com.ti.ccstudio.apps.projectBuild -ccs.projects test_28027 -ccs.configuration Debug
