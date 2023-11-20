@@ -28,6 +28,9 @@ pipeline {
 					def VersionCompiladorTIConComillas = bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()
 					def VersionCompiladorTISinComillas = VersionCompiladorTIConComillas.replaceAll('"', '')
 					
+					echo "Longitud de VersionCompiladorTISinComillas: ${VersionCompiladorTISinComillas.length()}"
+					echo "Longitud de VersionCompiladorTI: ${VersionCompiladorTI.length()}"
+					
 					//if(VersionCompiladorTISinComillas != VersionCompiladorTI)
 					//{
 					//	error("La version de compilador no coincide")
@@ -35,15 +38,6 @@ pipeline {
 					//	echo "${VersionCompiladorTISinComillas}"
 					//}					
 					
-					echo "${VersionCompiladorTISinComillas}"
-					echo "${VersionCompiladorTI}"
-					
-					 if (VersionCompiladorTISinComillas == VersionCompiladorTI) {
-                        echo "Las variables son iguales"
-                    } else {
-                        echo "Las variables son diferentes"
-                    }
-                    
                 }
             }
         }
