@@ -2,7 +2,7 @@ pipeline {
     agent any
 	
     environment {
-        GitDirPC = 'C:\\Users\\Usuario\\Documentos\\GitHub\\ci-cd'
+        GitDirPC = 'C:\\Users\\Usuario\\Documents\\GitHub\\ci-cd'
         GitDirDebug = "${GitDirPC}\\Debug"
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
 		NombreProyecto = ''
