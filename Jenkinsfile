@@ -24,10 +24,18 @@ pipeline {
 		stage('Version Compilador TI') {
             steps {
                 script {
-					def NombreProyectoConComillas = bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()
-					NombreProyecto = NombreProyectoConComillas.replaceAll('"', '')
-					echo "${NombreProyecto}"
-					echo "${VersionCompiladorTI}"
+					def VersionCompiladorTIConComillas = bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()
+					def VersionCompiladorTISinComillas = VersionCompiladorTIConComillas.replaceAll('"', '')
+					
+					if(VersionCompiladorTISinComillas != VersionCompiladorTI)
+					{
+						error("La version de compilador no coincide")
+					}else{
+						echo "${VersionCompiladorTISinComillas}"
+					}					
+					
+					//echo "${NombreProyecto}"
+					//echo "${VersionCompiladorTI}"
                     
                 }
             }
