@@ -8,8 +8,8 @@ pipeline {
 						
 		VersionCompiladorTI = 'v22.6.0'									//Completar por usuario version de compilador TI del proyecto
 		
-		JAVA_HOME = 'C:\\Program Files\\Eclipse Adoptium\\jdk-11.0.13.8-hotspot\\'
-        PATH = "${env.JAVA_HOME}\\bin;${env.PATH}"
+		ECLIPSE = 'C:\\ti\\ccs1120\\ccs\\eclipse\\'
+        PATH = "${env.ECLIPSE}\\bin;${env.PATH}"
     }
 
     stages {
@@ -40,7 +40,7 @@ pipeline {
 		stage('TI') {
             steps {
                 script {
-					bat 'java -version'
+					bat 'eclipse'
                 }
             }
         }
