@@ -30,9 +30,9 @@ pipeline {
 		stage('TI') {
             steps {
                 script {
-					//def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\"", returnStatus: true)
+					def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\"", returnStatus: true)
 					//bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" \"${DirWorkspace}\" \"${NombreProyecto}\"", returnStatus: false, returnStdout: true).trim()
-					bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" \"${DirWorkspace}\" \"${NombreProyecto}\"", returnStatus: false, returnStdout: true).trim()
+					//bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" \"${DirWorkspace}\" \"${NombreProyecto}\"", returnStatus: false, returnStdout: true).trim()
 
 
                 }
