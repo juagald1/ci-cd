@@ -9,6 +9,7 @@ pipeline {
 		DirWorkspace = 'C:\\Users\\Usuario\\workspace'
 		
 		NombreProyecto = 'test_28027'
+		NombreProyecto1 = 'test_28027'
 		VersionCompiladorTI = 'v22.6.0'									//Completar por usuario version de compilador TI del proyecto
     }
 
@@ -41,9 +42,9 @@ pipeline {
                 script {
 						echo "GitDirTools: ${GitDirTools}"
 						echo "DirWorkspace: ${DirWorkspace}"
-						echo "NombreProyecto: ${NombreProyecto}"
+						echo "NombreProyecto: ${NombreProyecto1}"
 
-						def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" \"${DirWorkspace}\" \"${NombreProyecto}\"", returnStatus: false, returnStdout: true).trim()
+						def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" \"${DirWorkspace}\" \"${NombreProyecto1}\"", returnStatus: false, returnStdout: true).trim()
 
 						echo "Result: ${result}"
 
