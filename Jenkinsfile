@@ -5,11 +5,17 @@ pipeline {
         GitDirPC = 'C:\\Users\\Usuario\\Documents\\GitHub\\ci-cd'		//Completar por usuario ubicación del repositorio
         GitDirDebug = "${GitDirPC}\\Debug"
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
-		
+						
 		VersionCompiladorTI = 'v22.6.0'									//Completar por usuario version de compilador TI del proyecto
     }
 
     stages {
+	    stage('Set Environment Variables') {
+            steps {
+                bat 'setx JAVA_HOME "C:\\Program Files\\Eclipse Adoptium\\jdk-11.0.13.8-hotspot\\" /M'
+				echo %JAVA_HOME% 
+            }
+		}
         stage('Nombre Proyecto CCS') {
             steps {
                 script {
