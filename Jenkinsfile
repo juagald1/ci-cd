@@ -24,7 +24,8 @@ pipeline {
 		stage('Version Compilador TI') {
             steps {
                 script {
-                    bat "call \"${GitDirTools}\\VersionCompiladorTI.bat\" ${NombreProyecto}.map \"${VersionCompiladorTI}\""
+					NombreProyecto = bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()
+                    
                 }
             }
         }
