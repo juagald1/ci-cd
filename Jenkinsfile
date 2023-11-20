@@ -39,7 +39,9 @@ pipeline {
 		stage('Compila Proyecto') {
             steps {
                 script {
+					NombreProyecto = bat(script: "call \"${GitDirTools}\\NombreProyecto.bat\" \"${GitDirDebug}\"", returnStatus: false, returnStdout: true).trim()
 					bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" "${DirWorkspace}" "${NombreProyecto}"", returnStatus: false, returnStdout: true).trim()
+
                 }
             }
         }
