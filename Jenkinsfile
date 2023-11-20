@@ -40,17 +40,7 @@ pipeline {
 		stage('Compila Proyecto') {
             steps {
                 script {
-						echo "GitDirTools: ${GitDirTools}"
-						echo "DirWorkspace: ${DirWorkspace}"
-						echo "NombreProyecto: ${NombreProyecto1}"
-
-						// Change to the tools directory
-						bat "cd \"${GitDirTools}\""
-
-						// Execute the batch script
-						def result = bat(script: "call \"CompilarProyecto.bat\" \"${DirWorkspace}\" \"${NombreProyecto1}\"", returnStatus: false, returnStdout: true).trim()
-
-						echo "Result: ${result}"
+					def result = bat(script: "\"${GitDirTools}\\CompilarProyecto.bat\" \"${DirWorkspace}\" \"${NombreProyecto1}\"", returnStatus: false, returnStdout: true).trim()
                 }
             }
         }
