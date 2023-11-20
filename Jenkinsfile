@@ -24,8 +24,9 @@ pipeline {
 		stage('Version Compilador TI') {
             steps {
                 script {
-					NombreProyecto = bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()
-					echo ${NombreProyecto}
+					def NombreProyectoConComillas = bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()
+					NombreProyecto = NombreProyectoConComillas.replaceAll('"', '')
+					echo "${NombreProyecto}"
 					echo "${VersionCompiladorTI}"
                     
                 }
