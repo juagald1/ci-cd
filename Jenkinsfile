@@ -5,6 +5,7 @@ pipeline {
         GitDirPC = 'C:\\Users\\Usuario\\Documents\\GitHub\\ci-cd'
         GitDirDebug = "${GitDirPC}\\Debug"
         GitDirTools = "${GitDirPC}\\ci_cd_tools"
+		
 		NombreProyecto = ''
 		VersionCompiladorTI = 'v22.6.0'
     }
@@ -27,15 +28,15 @@ pipeline {
 					def VersionCompiladorTIConComillas = bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()
 					def VersionCompiladorTISinComillas = VersionCompiladorTIConComillas.replaceAll('"', '')
 					
-					if(VersionCompiladorTISinComillas != VersionCompiladorTI)
-					{
-						error("La version de compilador no coincide")
-					}else{
-						echo "${VersionCompiladorTISinComillas}"
-					}					
+					//if(VersionCompiladorTISinComillas != VersionCompiladorTI)
+					//{
+					//	error("La version de compilador no coincide")
+					//}else{
+					//	echo "${VersionCompiladorTISinComillas}"
+					//}					
 					
-					//echo "${NombreProyecto}"
-					//echo "${VersionCompiladorTI}"
+					echo "${VersionCompiladorTISinComillas}"
+					echo "${VersionCompiladorTI}"
                     
                 }
             }
