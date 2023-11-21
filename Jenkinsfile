@@ -8,7 +8,7 @@ pipeline {
 		VersionCompiladorTI = 'v21.6.1'											//Completar, version de compilador TI del proyecto
 		
         GitDirDebug = "${DirGitPC}\\Debug"
-        GitDirTools = "${DirGitPC}\\ci_cd_tools"												
+        GitDirTools = "${DirGitPC}\\ci_cd"												
     }
 
     stages {
