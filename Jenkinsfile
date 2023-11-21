@@ -19,7 +19,7 @@ pipeline {
 					// 2 Se añade como primer argumento de entrada la ruta con el archivo .map
 					// 3 Se añade como segundo argumento de entrada la version de compilador TI a buscar en archivo .map
 					// 4 Si lo encuentra correctamente ejecuta echo, sino existe, el archivo .bat devuelve log con error
-					bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\test_28027.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()
+					bat(script: "call \"${GitDirTools}\\VersionCompiladorTI.bat\" \"${GitDirDebug}\\${NombreProyecto}.map\" \"${VersionCompiladorTI}\"", returnStatus: false, returnStdout: true).trim()
 					echo "Version Compilador TI \"${VersionCompiladorTI}\" OK"								
                 }
             }
