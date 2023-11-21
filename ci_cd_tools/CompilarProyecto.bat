@@ -5,7 +5,7 @@ set proyecto=%2
 REM Se añde la ruta completa de (eclipse) a eclipsec.exe, ya que Jenkins no permite ejecutar directamente variables de path añadidas en el PC local
 REM Añade el proyecto al workspace y lo sobreescribe si ya existe para evitar errores
 REM C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data "C:\Users\Usuario\workspace" -application com.ti.ccstudio.apps.projectImport -ccs.location C:\Users\Usuario\Documents\GitHub\ci-cd -ccs.overwrite
-C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data %workspace% -application com.ti.ccstudio.apps.projectImport -ccs.location C:\Users\Usuario\Documents\GitHub\ci-cd -ccs.overwrite
+REM C:\ti\ccs1120\ccs\eclipse\eclipsec -noSplash -data %workspace% -application com.ti.ccstudio.apps.projectImport -ccs.location C:\Users\Usuario\Documents\GitHub\ci-cd -ccs.overwrite
 
 REM Crea archivo auxiliar para almacenar log de manera temporal
 set "archivoTemporal=temp_output.txt"	

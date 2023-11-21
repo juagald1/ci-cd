@@ -2,8 +2,8 @@ pipeline {
     agent any
 	
     environment {
-        GitDirPC = 'C:\\Users\\Usuario\\Documents\\GitHub\\ci-cd'		//Completar por usuario ubicación del repositorio IMPORTANTE!: Respetar doble \\
-		DirWorkspace = 'C:\\Users\\Usuario\\workspace'					//Completar por usuario ubicación del workspace	IMPORTANTE!: Respetar doble \\			
+        GitDirPC = 'C:\\Users\\Usuario\\Documents\\GitHub\\ci-cd'		//Completar por usuario ubicación del proyecto en repositorio 	IMPORTANTE!: Respetar doble \\
+		DirWorkspace = 'C:\\Users\\Usuario\\workspace'					//Completar por usuario ubicación del workspace					IMPORTANTE!: Respetar doble \\			
 		NombreProyecto = 'test_28027'									//Completar por usuario nombre proyecto
 		VersionCompiladorTI = 'v22.6.0'									//Completar por usuario version de compilador TI del proyecto
 		
@@ -27,6 +27,8 @@ pipeline {
 		stage('Compilacion Proyecto') {
             steps {
                 script {
+					
+					bat(script: "call \"${GitDirTools}\\ProyectoWorkspace.bat\" ${DirWorkspace} ${GitDirPC}", returnStatus: true)
 					def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" ${DirWorkspace} ${NombreProyecto}", returnStatus: true)
 					
 					if(result == 0)
