@@ -29,7 +29,7 @@ pipeline {
                 script {
 					// 1 Se añade proyecto a workspace (solo añade datos a carpeta .metadata, no añade proyecto completo)
 					// 2 Se compila proyecto
-					bat(script: "call \"${GitDirTools}\\ProyectoWorkspace.bat\" ${DirWorkspace} ${GitDirPC}", returnStatus: true)
+					bat(script: "call \"${GitDirTools}\\ProyectoWorkspace.bat\" ${DirWorkspace} ${DirGitProyecto}", returnStatus: true)
 					def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" ${DirWorkspace} ${NombreProyecto}", returnStatus: true)
 					
 					if(result == 0)
