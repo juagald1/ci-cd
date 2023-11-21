@@ -4,8 +4,8 @@ pipeline {
     environment {
         DirGitPC 			= 'C:\\Users\\Juan\\Documents\\GitHub\\ci-cd'	//Completar, ubicación del proyecto en repositorio 		IMPORTANTE!: Respetar doble \\
 		DirWorkspacePC 		= 'C:\\Users\\Juan\\workspace'					//Completar, ubicación del workspace					IMPORTANTE!: Respetar doble \\			
-		NombreProyecto 		= 'CI_CD_TI'										//Completar, nombre proyecto
-		VersionCompiladorTI = 'v21.6.1'											//Completar, version de compilador TI del proyecto
+		NombreProyecto 		= 'CI_CD_TI'									//Completar, nombre proyecto
+		VersionCompiladorTI = 'v21.6.1'										//Completar, version de compilador TI del proyecto
 		
         GitDirDebug = "${DirGitPC}\\Debug"
         GitDirTools = "${DirGitPC}\\ci_cd"												
