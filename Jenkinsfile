@@ -2,13 +2,13 @@ pipeline {
     agent any
 	
     environment {
-        DirGitProyecto 		= 'C:\\Users\\Usuario\\Documents\\GitHub\\ci-cd'	//Completar, ubicación del proyecto en repositorio 		IMPORTANTE!: Respetar doble \\
-		DirWorkspace 		= 'C:\\Users\\Usuario\\workspace'					//Completar, ubicación del workspace					IMPORTANTE!: Respetar doble \\			
-		NombreProyecto 		= 'test_28027'										//Completar, nombre proyecto
-		VersionCompiladorTI = 'v22.6.0'											//Completar, version de compilador TI del proyecto
+        GitDirPC = 'C:\\Users\\Usuario\\Documents\\GitHub\\ci-cd'		//Completar, ubicación del proyecto en repositorio 		IMPORTANTE!: Respetar doble \\
+		DirWorkspace = 'C:\\Users\\Usuario\\workspace'					//Completar, ubicación del workspace					IMPORTANTE!: Respetar doble \\			
+		NombreProyecto = 'test_28027'									//Completar, nombre proyecto
+		VersionCompiladorTI = 'v22.6.0'									//Completar, version de compilador TI del proyecto
 		
-        GitDirDebug = "${DirGitProyecto}\\Debug"
-        GitDirTools = "${DirGitProyecto}\\ci_cd_tools"												
+        GitDirDebug = "${GitDirPC}\\Debug"
+        GitDirTools = "${GitDirPC}\\ci_cd_tools"												
     }
 
     stages {
@@ -27,9 +27,8 @@ pipeline {
 		stage('Compilacion Proyecto') {
             steps {
                 script {
-					// 1 Se añade proyecto a workspace (solo añade datos a carpeta .metadata, no añade proyecto completo)
-					// 2 Se compila proyecto
-					bat(script: "call \"${GitDirTools}\\ProyectoWorkspace.bat\" ${DirWorkspace} ${DirGitProyecto}", returnStatus: true)
+					
+					bat(script: "call \"${GitDirTools}\\ProyectoWorkspace.bat\" ${DirWorkspace} ${GitDirPC}", returnStatus: true)
 					def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" ${DirWorkspace} ${NombreProyecto}", returnStatus: true)
 					
 					if(result == 0)
