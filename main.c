@@ -1,7 +1,7 @@
 
 
 /**
- * main.c
+ * main.c ola esto es un comentario
  */
 int main(void)
 {
