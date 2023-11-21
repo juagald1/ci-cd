@@ -27,9 +27,7 @@ pipeline {
 		stage('Compilacion Proyecto') {
             steps {
                 script {
-					//def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\"", returnStatus: true)
 					def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" ${DirWorkspace} ${NombreProyecto}", returnStatus: true)
-
 					
 					if(result == 0)
 					{
