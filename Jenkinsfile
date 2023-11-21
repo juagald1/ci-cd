@@ -12,7 +12,6 @@ pipeline {
     }
 
     stages {
-
 		stage('Version Compilador TI') {
             steps {
                 script {
