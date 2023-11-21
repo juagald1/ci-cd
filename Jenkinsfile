@@ -2,10 +2,10 @@ pipeline {
     agent any
 	
     environment {
-        GitDirPC = 'C:\\Users\\Usuario\\Documentos\\GitHub\\ci-cd'		//Completar por usuario ubicación del repositorio
-		DirWorkspace ='C:\\Users\\Usuario\\workspace'					//Completar por usuario ubicación del workspace		
+        GitDirPC = 'C:\\Users\\Usuario\\Documents\\GitHub\\ci-cd'		//Completar por usuario ubicación del repositorio
+		DirWorkspace = 'C:\\Users\\Usuario\\workspace'					//Completar por usuario ubicación del workspace		
 		VersionCompiladorTI = 'v22.6.0'									//Completar por usuario version de compilador TI del proyecto
-		NombreProyecto = 'test_28027'									//Completar por usuario nombre proyecto
+		NombreProyecto = 'test_28026'									//Completar por usuario nombre proyecto
 		
         GitDirDebug = "${GitDirPC}\\Debug"
         GitDirTools = "${GitDirPC}\\ci_cd_tools"												
