@@ -28,8 +28,8 @@ pipeline {
             steps {
                 script {
 					
-					bat(script: "call \"${GitDirTools}\\ProyectoWorkspace.bat\" ${DirWorkspacePC} ${DirGitPC}", returnStatus: true)
-					def result = bat(script: "call \"${GitDirTools}\\CompilarProyecto.bat\" ${DirWorkspacePC} ${NombreProyecto}", returnStatus: true)
+					bat(script: "call \"${GitDirTools}\\ProyectoWorkspaceTI.bat\" ${DirWorkspacePC} ${DirGitPC}", returnStatus: true)
+					def result = bat(script: "call \"${GitDirTools}\\CompilarProyectoTI.bat\" ${DirWorkspacePC} ${NombreProyecto}", returnStatus: true)
 					
 					if(result == 0)
 					{
