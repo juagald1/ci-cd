@@ -1,9 +1,5 @@
-
-
 /**
- * main.c ola esto es un comentario
- * y esto otro
- * y otro
+ * main.c
  */
 int main(void)
 {
