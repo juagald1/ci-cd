@@ -1,0 +1,10 @@
+/Debug/
+*.bin
+*.elf
+*.list
+*.map
+*.list
+!objects.list
+*.d
+*.o
+*.su
