@@ -43,5 +43,6 @@ if %errorlevel% equ 0 (
 	del "temp_output.txt"
 	exit /b 2
 )else (    
+	del "temp_output.txt"
     exit /b 0 REM Si no encuentra cadenas revisar rutas
 )
