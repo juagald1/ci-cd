@@ -1,7 +1,7 @@
 ******************************************************************************
-             TMS320C2000 Linker PC v21.6.1                     
+             TMS320C2000 Linker PC v22.6.0                     
 ******************************************************************************
->> Linked Tue Nov 21 22:28:53 2023
+>> Linked Thu Nov 23 08:55:51 2023
 
 OUTPUT FILE NAME:   <CI_CD_TI.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 00008000
@@ -71,7 +71,7 @@ MODULE SUMMARY
     +--+-----------------+------+------------------+--------------------+
        Total:            2      0                  0                 
                                                                      
-    C:\ti\ccs1120\ccs\tools\compiler\ti-cgt-c2000_21.6.1.LTS\lib\rts2800_ml.lib
+    C:\ti\ccs1120\ccs\tools\compiler\ti-cgt-c2000_22.6.0.LTS\lib\rts2800_ml.lib
        boot28.asm.obj    84     0                  0                 
        exit.c.obj        41     14                 6                 
        cpy_tbl.c.obj     36     0                  0                 
