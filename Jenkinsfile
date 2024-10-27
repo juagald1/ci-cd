@@ -10,8 +10,13 @@ pipeline {
         GitDirDebug = "${DirGitPC}\\Debug"
         GitDirTools = "${DirGitPC}\\ci_cd"												
     }
-
+	
     stages {
+		stage ('Hola') {
+			 steps {
+						echo 'Hello World'
+				   }
+		}
 		stage('Version Compilador TI') {
             steps {
                 script {
